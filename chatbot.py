@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from dotenv import load_dotenv
 import os
@@ -80,12 +80,17 @@ def get_chatbot_response(chat_history):
         str: The content of the AI's response.
     """
     try:
-        google_api_key = os.getenv("GOOGLE_API_KEY")
-        if not google_api_key:
-            st.error("Google API Key not found. Please set it in the .env file.")
+        huggingface_api_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+        if not huggingface_api_key:
+            st.error("HuggingFace API Key not found. Please set it in the .env file.")
             return None
 
-        model = ChatGoogleGenerativeAI(model='gemini-2.0-flash', google_api_key=google_api_key)
+        llm = HuggingFaceEndpoint(
+                     repo_id="deepseek-ai/DeepSeek-R1-0528",
+                     task="text-generation"
+        )
+        model = ChatHuggingFace(llm = llm)
+
         output = model.invoke(chat_history)
         return output.content
     except Exception as e:
@@ -96,7 +101,7 @@ def get_chatbot_response(chat_history):
 with st.sidebar:
     st.title("✨GemBot Chatbot")
     st.markdown("""
-    Welcome to your personal AI assistant powered by Google's Gemini model.
+    Welcome to your personal AI assistant powered by Deepseek's R1-0528 model.
     
     **Instructions:**
     1.  Type your message in the chat box below.
