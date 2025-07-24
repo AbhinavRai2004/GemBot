@@ -34,8 +34,8 @@ Follow these steps to set up and run GemBot on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/gembot-chatbot.git
-cd gembot-chatbot
+git clone https://github.com/AbhinavRai2004/GemBot
+cd GemBot
 ```
 
 ### 2. Create a Virtual Environment
