@@ -1,4 +1,3 @@
-
 # ✨ GemBot: A Conversational AI with DeepSeek & Streamlit
 
 Unleash the power of conversational AI with GemBot, a sleek and intelligent chatbot built with Streamlit and LangChain. Powered by Hugging Face's `deepseek-ai/DeepSeek-R1-0528` model, GemBot offers a natural, context-aware chat experience wrapped in a beautiful, dark-themed interface.
@@ -7,13 +6,13 @@ Unleash the power of conversational AI with GemBot, a sleek and intelligent chat
 
 ## 🚀 Key Features
 
-| Feature             | Description                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| 🧠 Intelligent Core  | Leverages the powerful DeepSeek R1 model for nuanced and human-like conversational abilities. |
-| 💬 Context-Aware     | Built-in LangChain memory ensures the chatbot remembers previous parts of the conversation. |
-| 🎨 Sleek UI          | A modern, fully responsive, and dark-themed interface created with Streamlit. |
-| 🔐 Secure & Simple   | Manages API keys securely using a .env file, keeping your credentials safe. |
-| ⚙️ Easy to Run       | Get up and running in minutes with a simple installation process and minimal dependencies. |
+| Feature             | Description                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| 🧠 Intelligent Core | Leverages the powerful DeepSeek R1 model for nuanced and human-like conversational abilities. |
+| 💬 Context-Aware    | Built-in LangChain memory ensures the chatbot remembers previous parts of the conversation.   |
+| 🎨 Sleek UI         | A modern, fully responsive, and dark-themed interface created with Streamlit.                 |
+| 🔐 Secure & Simple  | Manages API keys securely using a .env file, keeping your credentials safe.                   |
+| ⚙️ Easy to Run      | Get up and running in minutes with a simple installation process and minimal dependencies.    |
 
 ---
 
@@ -100,16 +99,15 @@ gembot-chatbot/
 
 ---
 
-
 ## 🙌 Acknowledgements
 
 A huge thank you to the teams behind these incredible tools:
 
-- DeepSeek AI  
-- LangChain  
-- Streamlit  
-- Hugging Face  
+- DeepSeek AI
+- LangChain
+- Streamlit
+- Hugging Face
 
 ---
 
-### 💙 Made with love by [Abhinav Rai](https://github.com/abhinavrai03) 💙
+### 💙 Made with love by [Abhinav Rai](https://github.com/AbhinavRai2004) 💙
