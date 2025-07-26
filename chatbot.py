@@ -1,3 +1,4 @@
+import re
 import streamlit as st
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
@@ -140,7 +141,8 @@ if user_input:
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = get_chatbot_response(st.session_state.chat_history)
-            st.markdown(response)
+            cleaned_response = re.sub(r"<think>.*?</think>", "", response, flags=re.DOTALL)
+            st.markdown(cleaned_response.strip())
     
 
-    st.session_state.chat_history.append(AIMessage(content=response))
+    st.session_state.chat_history.append(AIMessage(content=cleaned_response.strip()))
